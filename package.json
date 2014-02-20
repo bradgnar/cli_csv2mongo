@@ -1,18 +1,27 @@
 {
-  "name": "cli_csv2mongo",
+  "name": "csv2mongo-js",
   "version": "0.0.0",
-  "description": "This is a command line interface that will take a csv file and transform it into whatever json object you need, then store it in mongodb",
+  "description": "Simple node based CLI tool to read a CSV file into mongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": ""
+  },
+  "engines":{
+    "node": ">=0.10"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/bradgnar/cli_csv2mongo.git"
   },
+  "preferGlobal": "true",
+  "bin":{
+    "csv2mongo": "csv2mongo.js"
+  },
   "keywords": [
     "mongo",
-    "csv"
+    "csv",
+    "json",
+    "CLI"
   ],
   "author": "Bradgnar <bradgnar@gmail.com>",
   "license": "ISC",
@@ -22,6 +31,7 @@
   "homepage": "https://github.com/bradgnar/cli_csv2mongo",
   "dependencies": {
     "mongodb": "~1.3.23",
-    "csv": "~0.3.7"
+    "csv": "~0.3.7",
+    "mongoose": "~3.8.7"
   }
 }
