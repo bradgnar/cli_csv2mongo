@@ -1,6 +1,6 @@
 {
   "name": "csv2mongo-js",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Simple node based CLI tool to read a CSV file into mongoDB",
   "main": "index.js",
   "scripts": {

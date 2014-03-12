@@ -10,7 +10,7 @@ var userArguments = process.argv.slice(2),
 if (userArguments.length > 3) {
     throw new Error('Max three arguments may be specified (the full file directory that you want to load in the db)');
 }else if(userArguments.length <= 0){
-	throw new Error('There needs to be at least a file path specified');
+	throw new Error('There needs to be a full file path specified');
 }
 
 settings = {
@@ -30,7 +30,7 @@ var Mongo = require("mongodb"),
 	fs = require("fs"),
 	mongoose = require("mongoose"),
 	MongoClient = Mongo.MongoClient,
-	collection;// = mongoose.model(settings.collection_name, settings.schema);
+	collection;
 
 	mongoose.connect('mongodb://localhost/' + settings.db_name);
 	var db = mongoose.connection;
@@ -68,13 +68,12 @@ var Mongo = require("mongodb"),
 				
 			})
 			.on('end', function(){
-				console.log('end hit ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;');
+				
+				//put whatever you want here
 
-				//this is just to check to see if the Bath data items are getting read in correctly
-				collection.find({}, function(err, dataPiece){
-					if(err) {console.log(err.message); return;}
-					// console.log('ITEM FOUND');
-					// console.log(dataPiece);
+				// collection.find({}, function(err, dataPiece){
+				// 	if(err) {console.log(err.message); return;}
+					
 				});
 			});
 	});
