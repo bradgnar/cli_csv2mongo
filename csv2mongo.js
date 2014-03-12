@@ -33,7 +33,7 @@ var Mongo = require("mongodb"),
 	collection;// = mongoose.model(settings.collection_name, settings.schema);
 
 	mongoose.connect('mongodb://localhost/' + settings.db_name);
-	var db = mongoose.connection
+	var db = mongoose.connection;
 	db.on('error', console.error.bind(console, 'connection error'));
 	db.once('open', function callback(){
 		console.log('connection open');
