@@ -25,11 +25,9 @@ settings = {
 
 
 
-var Mongo = require("mongodb"),
-	csv = require("csv"),
+var	csv = require("csv"),
 	fs = require("fs"),
 	mongoose = require("mongoose"),
-	MongoClient = Mongo.MongoClient,
 	collection;
 
 	mongoose.connect('mongodb://localhost/' + settings.db_name);
